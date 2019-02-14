@@ -6,6 +6,8 @@ import { AUTHORS_DATA_FETCHING,
         TOGGLE_PUBLICATIONS, 
         SORT_PUBLICATIONS_DOWN,
         SORT_PUBLICATIONS_UP,
+        FIND_LEADERS,
+        NEXT_PAGE
     } from '../actions/actions';
 
 export const fetchJsonData = (data) =>({
@@ -42,3 +44,10 @@ export const sortPublicationUp = () => ({
     type: SORT_PUBLICATIONS_UP
 })
 
+export const findLeaders = () => ({
+    type: FIND_LEADERS
+})
+
+export const nextPage = () => ({
+    type: NEXT_PAGE
+})

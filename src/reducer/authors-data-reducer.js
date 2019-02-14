@@ -4,6 +4,7 @@ import { AUTHORS_DATA_FETCHING,
          SORT_PAGEVIEW_UP,
          SORT_PUBLICATIONS_DOWN,
          SORT_PUBLICATIONS_UP,
+         FIND_LEADERS
         } from "../actions/actions"
 
 export const authorReducer = (state = {}, action) => {
@@ -54,6 +55,11 @@ export const authorReducer = (state = {}, action) => {
                     .sort(function(author1, author2)
                     {return author2.count_pub - author1.count_pub})
             }
+            case FIND_LEADERS:
+            return{
+                ...state
+            }
+
         default: return state
     }
 };

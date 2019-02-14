@@ -1,0 +1,25 @@
+.pagination-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px; 
+}
+.centaral-container{
+    width:8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.numbers{
+    color: white;
+    font-weight: bold;
+    opacity: 0.9
+}

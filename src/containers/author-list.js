@@ -5,12 +5,14 @@ import ListItem from '../components/list-item';
 
 class AuthorList extends Component {
     render() {
-        const { authorsData } = this.props;
+        const { authorsData, limitLeft, limitRight } = this.props;
         return (
             <div>
                 {
                     authorsData
-                    ? authorsData.map( (elem, i) =>{
+                    ? authorsData
+                    .slice(limitLeft, limitRight)
+                    .map( (elem, i) =>{
                         if(elem.visible === true){
                         return (<ListItem
                             key={i+100}
@@ -18,6 +20,7 @@ class AuthorList extends Component {
                             count_pub={elem.count_pub}
                             pageviews={elem.pageviews}
                             color={elem.color}
+                            achivement={elem.achivement}
                         >{elem.name}</ListItem>)}
                         else{ return null}
                         })
@@ -33,7 +36,9 @@ AuthorList.propTypes = {
 };
 
 const mapStateToProps = (state) =>({
-    authorsData: state.authorReducer.authors_data
+    authorsData: state.authorReducer.authors_data,
+    limitLeft: state.pagination.left_limit,
+    limitRight: state.pagination.right_limit
 });
 
 export default connect(mapStateToProps, null)(AuthorList);
