@@ -1,6 +1,11 @@
 import { AUTHORS_DATA_FETCHING, 
         INPUT_CHANGE,
-        SORT_PAGEVIEW_DOWN 
+        SORT_PAGEVIEW_DOWN,
+        SORT_PAGEVIEW_UP,
+        TOGGLE_PAGEVIEWS,
+        TOGGLE_PUBLICATIONS, 
+        SORT_PUBLICATIONS_DOWN,
+        SORT_PUBLICATIONS_UP,
     } from '../actions/actions';
 
 export const fetchJsonData = (data) =>({
@@ -13,6 +18,27 @@ export const changeInputValue = (value) => ({
     value
 })
 
+export const togglePageView = () => ({
+    type: TOGGLE_PAGEVIEWS
+})
+
+export const togglePublications = () =>({
+    type: TOGGLE_PUBLICATIONS
+})
+
 export const sortByPageViewDown = () => ({
     type: SORT_PAGEVIEW_DOWN 
 })
+
+export const sortByPageViewUp = () => ({
+    type: SORT_PAGEVIEW_UP
+})
+
+export const sortPublicationDown = () =>({
+    type:  SORT_PUBLICATIONS_DOWN
+})
+
+export const sortPublicationUp = () => ({
+    type: SORT_PUBLICATIONS_UP
+})
+
