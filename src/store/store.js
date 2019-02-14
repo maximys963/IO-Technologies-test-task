@@ -1,10 +1,10 @@
 import { createStore, combineReducers, compose } from 'redux';
-import { reducer as fromReducer } from 'redux-form';
 import { authorReducer } from '../reducer/authors-data-reducer';
+import { inputChange } from '../reducer/input-reducer'
 
 const rootReducer = combineReducers({
     authorReducer,
-    form: fromReducer
+    inputChange
 });
 
 const initialState = {};

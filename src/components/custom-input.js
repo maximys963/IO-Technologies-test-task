@@ -1,27 +1,30 @@
 import React, {Component} from 'react';
-import { Field, reduxForm} from 'redux-form';
+import { connect } from 'react-redux';
+import * as actions from '../actionCreators/action-creators'
 import './custom-input.css';
 
 class SearchInput extends Component{ 
-render(){     
-return( 
-    <div className='input-container'>
-    <img 
-    className='search-img'
-    src={require('../assets/images/search.png')}/>
-    <Field 
-    placeholder='Поиск авторов по имени'
-    name='search'
-    component='input'
-    type='text'
-    />
-    </div>
-);
-}
-}
+    render(){  
+        const {inputValue, changeInputValue, sortByPageViewDown} = this.props   
+    return( 
+        <div className='input-container'>
+            <img 
+            alt='search'
+            className='search-img'
+            src={require('../assets/images/search.png')}/>
+        <input 
+        onChange={(e) => changeInputValue(e.target.value)}
+        value={inputValue}/>
+        <button>pub</button>
+        <button onClick={() => sortByPageViewDown()}>pagev</button>
+        </div>
+    );
+    }
+    }
 
-SearchInput = reduxForm({
-    form: 'search'
-})(SearchInput);
 
-export default SearchInput;
+
+const mapStateToProps = (state) => ({
+inputValue: state.inputChange.inputValue
+});
+export default connect(mapStateToProps, actions)(SearchInput);
