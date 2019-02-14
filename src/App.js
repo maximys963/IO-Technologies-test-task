@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux';
+import AuthorList from './containers/author-list';
+import SearchInput from './components/custom-input'
+import * as actions from './actionCreators/action-creators';
+import JsonData from './data.json';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount(){
+    this.props.fetchJsonData(JsonData);
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className='main-container'>
+          <SearchInput/>
+          <AuthorList/>
+        </div>
       </div>
     );
   }
 }
 
-export default App;
+export default connect(null, actions)(App);
