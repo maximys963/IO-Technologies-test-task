@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/IO-Technologies-test-task/static/js/runtime~main.c2765ab1.js"
   },
   {
-    "revision": "878423e438d70217130b",
-    "url": "/IO-Technologies-test-task/static/js/main.878423e4.chunk.js"
+    "revision": "d0ad8e9301c6a3e427cf",
+    "url": "/IO-Technologies-test-task/static/js/main.d0ad8e93.chunk.js"
   },
   {
     "revision": "d0383670088f42bfa617",
     "url": "/IO-Technologies-test-task/static/js/2.d0383670.chunk.js"
   },
   {
-    "revision": "878423e438d70217130b",
-    "url": "/IO-Technologies-test-task/static/css/main.957aa34d.chunk.css"
+    "revision": "d0ad8e9301c6a3e427cf",
+    "url": "/IO-Technologies-test-task/static/css/main.168087cf.chunk.css"
   },
   {
-    "revision": "f8a46218412657787e73857bec8d9ea8",
+    "revision": "053258c5e09d067d9ed6fdacd96235b2",
     "url": "/IO-Technologies-test-task/index.html"
   }
 ];
