@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ListItem from '../components/list-item';
 
+
 class AuthorList extends Component {
     render() {
         const { authorsData, limitLeft, limitRight } = this.props;
         return (
-            <div>
+            <div className='author-list-container'>
                 {
                     authorsData
                     ? authorsData

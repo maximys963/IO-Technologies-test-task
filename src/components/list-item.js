@@ -11,7 +11,7 @@ class ListItem extends Component{
              :{backgroundColor: '#f4f6f9'}
         }>
     <div className='zero-limiter'>
-        <div className='number-position'>{number + 1}</div>
+        <div className='number-position'>{number}</div>
         <div className='first-limiter'>
         <div className='circle-letter'
         style={{backgroundColor: color}}
