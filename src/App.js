@@ -21,6 +21,7 @@ class App extends Component {
       }else{
         elem.achivement = -1;
       }
+      elem.positionNumber = i+1;
       elem.visible = true;
       elem.color = randomColor()
       return(elem)

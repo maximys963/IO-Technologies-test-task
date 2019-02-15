@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actionCreators/action-creators'
+import { Button } from 'semantic-ui-react'
 import './custom-input.css';
 
 class SearchInput extends Component{ 
@@ -36,8 +37,8 @@ class SearchInput extends Component{
         <input 
         onChange={(e) => changeInputValue(e.target.value)}
         value={inputValue}/>
-        <button onClick={()=>this.onPublicationSortClick()}>pub</button>
-        <button onClick={() => this.onPageViewSortClick()}>pagev</button>
+        <Button basic color='grey' onClick={()=>this.onPublicationSortClick()}>publications</Button>
+        <Button basic color='grey' onClick={() => this.onPageViewSortClick()}>pageviews</Button>
         </div>
     );
     }

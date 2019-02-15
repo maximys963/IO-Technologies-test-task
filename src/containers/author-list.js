@@ -16,7 +16,8 @@ class AuthorList extends Component {
                         if(elem.visible === true){
                         return (<ListItem
                             key={i+100}
-                            number={i}
+                            number={elem.positionNumber}
+                            backgoundIndex={i}
                             count_pub={elem.count_pub}
                             pageviews={elem.pageviews}
                             color={elem.color}

@@ -3,10 +3,10 @@ import './list-item.css'
 
 class ListItem extends Component{
     render(){
-        const {number, children, count_pub, pageviews, color, achivement} = this.props
+        const {number, backgoundIndex, children, count_pub, pageviews, color, achivement} = this.props
         return(
     <div className='list-item-container'
-         style={number%2 === 0 
+         style={backgoundIndex %2 === 0 
              ?{backgroundColor: 'white'}
              :{backgroundColor: '#f4f6f9'}
         }>
