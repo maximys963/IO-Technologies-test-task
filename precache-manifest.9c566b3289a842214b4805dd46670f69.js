@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/maximys963/IO-Technologies-test-task/static/css/main.957aa34d.chunk.css"
   },
   {
-    "revision": "40c883538166d6fc1fb7b599b7bef57e",
+    "revision": "54621ef747c7a71496403a3642f47fbf",
     "url": "/maximys963/IO-Technologies-test-task/index.html"
   }
 ];
