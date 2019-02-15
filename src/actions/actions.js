@@ -18,4 +18,6 @@ export const FIND_LEADERS = 'FIND_LEADERS';
 
 export const NEXT_PAGE = 'NEXT_PAGE';
 
+export const PREV_PAGE = 'PREV_PAGE';
+
 

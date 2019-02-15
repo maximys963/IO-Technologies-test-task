@@ -30,6 +30,7 @@ class App extends Component {
   }
 
   render() {
+    const {nextPage, prevPage, currentPage} = this.props
     return (
       <div className='App'>
         <div className='main-container'>
@@ -37,10 +38,18 @@ class App extends Component {
           <AuthorList/>
         </div>
         <Pagination 
-        moveNextPage={()=>this.props.nextPage()}/>
+        moveNextPage={()=> nextPage()}
+        movePrevPage={() => prevPage()}
+        dataLength={JsonData.length}
+        currentPage={currentPage}
+        />
       </div>
     );
   }
 }
 
-export default connect(null, actions)(App);
+const mapStateToProps = (state) =>({
+  currentPage: state.pagination.currentPage
+})
+
+export default connect(mapStateToProps, actions)(App);
