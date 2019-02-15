@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/maximys963/IO-Technologies-test-task/precache-manifest.9c566b3289a842214b4805dd46670f69.js"
+  "/IO-Technologies-test-task/precache-manifest.2851d718657428e875cd9e573c13be4b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/maximys963/IO-Technologies-test-task/index.html", {
+workbox.routing.registerNavigationRoute("/IO-Technologies-test-task/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
