@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actionCreators/action-creators'
+import * as actions from '../../actionCreators/action-creators'
 import { Button } from 'semantic-ui-react'
 import './custom-input.css';
 
 class SearchInput extends Component{ 
 
     onPageViewSortClick = () => {
-        const {togglePageView, pagevToggleValue, sortByPageViewDown,  sortByPageViewUp} = this.props
+        const {togglePageView, pagevToggleValue, sortByPageViewDown,  sortByPageViewUp} = this.props;
         if(pagevToggleValue === true){
             sortByPageViewDown()
         }else{
             sortByPageViewUp()
         }
         togglePageView()
-     }
+     };
 
      onPublicationSortClick = () =>{
          const {sortPublicationDown, sortPublicationUp, togglePublications, publToggleValue} = this.props
@@ -24,16 +24,16 @@ class SearchInput extends Component{
              sortPublicationUp()
          }
          togglePublications()
-     }
+     };
 
     render(){  
-        const {inputValue, changeInputValue} = this.props   
+        const {inputValue, changeInputValue} = this.props;
     return( 
         <div className='input-container'>
             <img 
             alt='search'
             className='search-img'
-            src={require('../assets/images/search.png')}/>
+            src={require('../../assets/images/search.png')}/>
         <input 
         onChange={(e) => changeInputValue(e.target.value)}
         value={inputValue}/>
@@ -41,8 +41,7 @@ class SearchInput extends Component{
         <Button basic color='grey' onClick={() => this.onPageViewSortClick()}>pageviews</Button>
         </div>
     );
-    }
-    }
+    }}
 
 
 
