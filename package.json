@@ -1,4 +1,5 @@
 {
+  "homepage": "https://maximys963.github.io/IO-Technologies-test-task/",
   "name": "test-task-io-tech",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint ./src "
   },
   "eslintConfig": {
@@ -31,5 +34,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
